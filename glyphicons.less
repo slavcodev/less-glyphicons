@@ -1,0 +1,23 @@
+#glyphicons {
+// Layout to generate main class
+	.layout(@url, @width, @height, @color: transparent) {
+		width: @width;
+		height: @height;
+		display: inline-block;
+		margin-top: 1px;
+		line-height: @height;
+		vertical-align: text-top;
+		background: @color url(@url) no-repeat 0 101%;
+		_margin-right: .3em;
+	}
+
+// Generate the themed classes.
+	.theme(@url) {
+		background-image:url(@url);
+	}
+
+	.icon(@x, @y) when (@x = 0) and (@y = 0) {background-position: 0 0;}
+.icon(@x, @y) when (@x > 0) and (@y > 0) {background-position: ~"-@{x}px" ~"-@{y}px";}
+.icon(@x, @y) when (@x > 0) and (@y = 0) {background-position: ~"-@{x}px" 0;}
+.icon(@x, @y) when (@x = 0) and (@y > 0) {background-position: 0 ~"-@{y}px";}
+	}
