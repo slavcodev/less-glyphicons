@@ -2,7 +2,6 @@
 A less file to ease the use of the [GLYPHICONS](http://glyphicons.com/).
 
 ###Usage
-*See examples.less*
 In your LESS-file setup and import glyphicons.less
 
 ```less
@@ -26,9 +25,14 @@ In your LESS-file setup and import glyphicons.less
 }
 ```
 
+*For more details see examples*
+
+
 Adding icons is simple just add this wherever you want an icon. The code below will give you the icon named `glass`.
 
-    <i class="icon icon-glass"></i>
+```css
+<i class="icon icon-glass"></i>
+```
 
 ###About GLYPHICONS
 GLYPHICONS is a library of precisely prepared monochromatic icons and symbols,
